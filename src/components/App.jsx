@@ -62,7 +62,7 @@ return (
   <>
     <GlobalStyle />
     <Toaster />
-    <Searchbar changeQuery={submitHandler} />
+    <Searchbar changeQuery={submitSearch } />
     <Hourglass
       color="#4fa94d"
       width="100"
