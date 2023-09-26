@@ -18,17 +18,15 @@ export const App = () => {
   const [loading, setLoading] = useState(false);
 
 
-submitSearch = (newQuery) => {
-  if (newQuery !== '') {
-    this.setState({
-      query: `${Date.now()}/${newQuery}`,
-      images: [],
-      page: 1,
-    })
-  } else { 
-    notify();
-  }
-};
+  const submitSearch = (newQuery) => {
+    if (newQuery !== '') {
+      setQuery(`${Date.now()}/${newQuery}`);
+      setImages([]);
+      setPage(1);
+    } else { 
+      notify();
+    }
+  };
 useEffect(() => {
   async function getResponse () {
       setLoading(true);
